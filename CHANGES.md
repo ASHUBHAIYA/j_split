@@ -6,7 +6,7 @@
 3. **Latest invoice number was wrong.** Old query ignored the voucher type and the parser took the *first* voucher. New collection query (Sales only, current FY) + parser picks the latest by date and number.
 4. **Educational mode dates.** New toggle clamps dates to 1st / 2nd / last day of month.
 5. **`'DEFAULT'` license key** made the Worker deliver any shop's jobs to any bridge. Removed; web app now uses the real license key (Company Settings).
-6. **Relay polling window** was 5-6 s vs a 3 s bridge poll; now 25-30 s, bridge polls every 2 s with backoff.
+6. **Relay polling window** was 5-6 s vs a 3 s bridge poll; now 25-30 s, bridge polls every 2 s with backoff. 
 
 ## Architecture
 - Relay is the only path for PC and mobile (`src/utils/tallyTransport.ts`). Local API is opt-in (`--local-api`) with an origin allow-list instead of `*`.
